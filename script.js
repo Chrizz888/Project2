@@ -10,3 +10,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
         //Logic for determing the Winner
 }
 });
+
