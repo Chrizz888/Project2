@@ -38,3 +38,15 @@ button:hover {
     background-color: #45a049;
 }
 
+#scoreboard p {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#scoreboard p {
+    font-size: 18px;
+    margin: 5px 0;
+}
