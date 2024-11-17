@@ -4,14 +4,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     const userScoreSpan = document.getElementById('userScore'); 
     const computerScoreSpan = document.getElementById('computerScore'); 
+    const resultDiv = document.createElement('div');
+    resultDiv.id = 'result';
+    document.getElementById('game').appendChild(resultDiv);
     const buttons = document.querySelectorAll('#game button'); 
     
     function playGame(userChoice) { 
         const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']; 
         const computerChoice = choices[Math.floor(Math.random() * choices.length)]; 
-        const result = determineWinner(userChoice, computerChoice); updateScore(result); displayResult(userChoice, computerChoice, result); } 
         
-        function determineWinner(userChoice, computerChoice) { 
+        const result = determineWinner(userChoice, computerChoice); 
+        updateScore(result); 
+        displayResult(userChoice, computerChoice, result); 
+    } 
+         function determineWinner(userChoice, computerChoice) { 
             if (userChoice === computerChoice) return 'draw'; 
             if ( 
             (userChoice === 'rock' && (computerChoice === 'scissors' || computerChoice === 'lizard')) || 
@@ -33,9 +39,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
             computerScoreSpan.textContent = computerScore; 
         } 
         function displayResult(userChoice, computerChoice, result) { 
-            alert(`You chose ${userChoice}, computer chose ${computerChoice}. Result: ${result}!`); 
+            const resultText = `You chose ${userChoice}, computer chose ${computerChoice}. Result: ${result}!`;
+            resultDiv.textContent = resultText; 
         } 
-        buttons.forEach(button => { button.addEventListener('click', () => { playGame(button.id); 
+        buttons.forEach(button => { 
+            button.addEventListener('click', () => { 
+                playGame(button.id); 
         }); 
     }); 
 });
