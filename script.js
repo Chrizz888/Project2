@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener('DOMContentLoaded', (event) => { 
     let userScore = 0; 
     let computerScore = 0; 
