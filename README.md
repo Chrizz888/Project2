@@ -1,4 +1,3 @@
-# Project2
 # Rock, Paper, Scissors, Lizard, Spock Game
 
 ## Project Description
@@ -10,11 +9,11 @@ This project is an interactive application that allows users to play the game "R
 - Visual feedback for game results
 
 ## Usage
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/Chrizz888/Project2.git`
 2. Open `index.html` in your preferred browser
 
 ## Deployment
-The application is deployed on GitHub Pages. Visit [this link to access the app](https://<your-username>.github.io/<repository-name>)
+The application is deployed on GitHub Pages. Visit [this link to access the app](https://chrizz888.github.io/Project2/)
 
 ## External Resources
 - **Font Awesome:** Icons used in the buttons are provided by [Font Awesome](https://fontawesome.com/)
