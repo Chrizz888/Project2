@@ -60,4 +60,11 @@ button:hover {
     border-radius: 5px;
     background-color: #ffeb3b;
     display: inline-block;
+    animation: flash 1s ease-in-out;
+}
+
+@keyframes flash {
+    0% {background-color: #ffeb3b;}
+    50% {background-color: #ffff00;}
+    100% {background-color: #ffeb3b;}
 }
