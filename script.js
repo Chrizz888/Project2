@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('game').appendChild(resultDiv);
     const buttons = document.querySelectorAll('#game button'); 
     
+    // Define Soundeffects
+    const clickSound = new Audio ('click.mp3');
+    const resultSound = new Audio ('result.mp3');
+
     function playGame(userChoice) { 
         const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']; 
         const computerChoice = choices[Math.floor(Math.random() * choices.length)]; 
