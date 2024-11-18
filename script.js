@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Soundeffects  
     const clickSound = new Audio('click.mp3'); 
     const resultSound = new Audio('result.mp3'); 
+
+    // Hintergrundmusik laden, aber nicht automatisch abspielen 
+    const backgroundMusic = new Audio('background-music.mp3'); 
+    backgroundMusic.loop = true; 
+    // Hintergrundmusik bei der ersten Interaktion abspielen 
+    document.body.addEventListener('click', () => { 
+        backgroundMusic.play(); }, { once: true });
     
     function playGame(userChoice) { 
         const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock']; 
@@ -60,3 +67,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }); 
         }); 
     });
+
+
